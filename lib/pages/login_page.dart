@@ -22,45 +22,45 @@ class LoginPage extends StatelessWidget {
               fontSize: 20,
             ),
           ),
-
           SizedBox(
             height: 20,
           ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+            child: Column(
+              children: [
 
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 20),
-          child: Column(children: [
-            TextFormField(
-              decoration: InputDecoration(
-                  hintText: "Enter  UserName",
-                  labelText:"UserName"
-              ),
+
+                TextFormField(
+                  decoration: InputDecoration(
+                      hintText: "Enter  UserName", labelText: "UserName"),
+                ),
+
+
+
+                TextFormField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                      hintText: "Enter  Password", labelText: "Password"),
+                ),
+
+
+
+                SizedBox(
+                  height: 20,
+                ),
+
+
+                ElevatedButton(
+                  child: Text("Login"),
+                  style: TextButton.styleFrom(),
+                  onPressed: () {
+                    print("hello Hari");
+                  },
+                )
+              ],
             ),
-
-
-            TextFormField(
-              obscureText: true,
-              decoration: InputDecoration(
-                  hintText: "Enter  Password",
-                  labelText:"Password"
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            
-            ElevatedButton( child:Text("Login"),style: TextButton.styleFrom(),onPressed: (){print("hello Hari");},)
-          ],),
-        ),
-
-
-
-
-
-
-
-
-
+          ),
         ],
       ),
     );
