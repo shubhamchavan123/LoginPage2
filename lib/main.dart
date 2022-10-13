@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter2/pages/login_page.dart';
+import 'package:flutter2/utils/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'pages/home_page.dart';
 
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
     bringvegitables();
     return MaterialApp(
       // home: Homepage(),
+      debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.light,
 
       theme: ThemeData(primarySwatch: Colors.purple,fontFamily: GoogleFonts.lato().fontFamily),
@@ -23,8 +25,8 @@ class MyApp extends StatelessWidget {
 
       routes: {
         "/": (context) => LoginPage(),
-        "/login": (context) => LoginPage(),
-        "/home": (context) => Homepage(),
+        MyRoutes.loginRoute: (context) => LoginPage(),
+        MyRoutes.homeRoute: (context) => Homepage(),
       },
     );
   }
