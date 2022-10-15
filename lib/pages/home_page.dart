@@ -49,14 +49,57 @@ class _HomepageState extends State<Homepage> {
       body: Padding(
         padding: const EdgeInsets.all(1.0),
         child: (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
-            ? ListView.builder(
+            ? GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 20,
+                  crossAxisSpacing: 20,
+                ),
                 itemBuilder: (context, index) {
-                  return ItemWidget(
-                    item: CatalogModel.items[index],
-                    key: Key("value"),
-                  );
+                  final item = CatalogModel.items[index];
+                  return Card(
+                      clipBehavior: Clip.antiAlias,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                      child: GridTile(
+                        header: Container(
+                          child: Text(
+                            item.name,
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          padding: const EdgeInsets.all(12),
+                          decoration: BoxDecoration(
+                            color: Colors.deepPurpleAccent,
+                          ),
+                        ),
+                        child: Image.network(
+                          item.image,
+                          fit: BoxFit.cover,
+                        ),
+
+                        footer: Container(
+                          child: Text(
+                            item.price.toString(),
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          padding: const EdgeInsets.all(12),
+                          decoration: BoxDecoration(
+                            color: Colors.pinkAccent,
+                          ),
+                        ),
+                      ));
                 },
+                itemCount: CatalogModel.items.length,
               )
+
+            // ListView.builder(
+            //     itemBuilder: (context, index) {
+            //       return ItemWidget(
+            //         item: CatalogModel.items[index],
+            //         key: Key("value"),
+            //       );
+            //     },
+            //   )
             : Center(
                 child: CircularProgressIndicator(),
               ),
