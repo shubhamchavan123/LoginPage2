@@ -6,63 +6,81 @@
       "desc": "Apple iPhone 12th generation",
       "price": 999,
       "color": "#33505a",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRISJ6msIu4AU9_M9ZnJVQVFmfuhfyJjEtbUm3ZK11_8IV9TV25-1uM5wHjiFNwKy99w0mR5Hk&usqp=CAc"
+      "image": "https://i5.walmartimages.com/asr/914bbe13-4c0e-4653-810b-cdd0127ea74f.364c40c4b678f93532e595f4ba221643.jpeg"
     },
     {
       "id": 2,
-      "name": "Pixel 5",
-      "desc": "Google Pixel phone 5th generation",
-      "price": 699,
-      "color": "#00ac51",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd0JhwLvm_uLDLc-la7hK9WyVpe9naJFcebKfhcICiq2KtvXDePNAU_9QO06LPcQ0K0fLByc7m&usqp=CAc"
+      "name": "iPhone 11 Pro",
+      "desc": "Apple iPhone 12th generation",
+      "price": 850,
+      "color": "#33505a",
+      "image": "https://pngimg.com/uploads/iphone/iphone_PNG5736.png"
     },
     {
       "id": 3,
-      "name": "M1 Macbook Air",
-      "desc": "Apple Macbook air with apple silicon",
-      "price": 1099,
-      "color": "#e0bfae",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMOMstwtmLnjFb3NHiDJ_kcQnueNVH-rv_3ps96HZmXlFumKWaiBqq_L4Uoyx3iFiNTrXNEbyB&usqp=CAc"
+      "name": "iPhone 12 Pro",
+      "desc": "Apple iPhone 12th generation",
+      "price": 999,
+      "color": "#33505a",
+      "image": "https://tse3.mm.bing.net/th?id=OIP.LwE4OIB5nKc6exVIFUIIBgHaHj&pid=Api&P=0"
     },
     {
       "id": 4,
-      "name": "Playstation 5",
-      "desc": "Sony Playstation 5th generation",
-      "price": 500,
-      "color": "#544ee4",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMOMstwtmLnjFb3NHiDJ_kcQnueNVH-rv_3ps96HZmXlFumKWaiBqq_L4Uoyx3iFiNTrXNEbyB&usqp=CAc"
+      "name": "iPhone 11 Pro",
+      "desc": "Apple iPhone 12th generation",
+      "price": 850,
+      "color": "#33505a",
+      "image": "https://pngimg.com/uploads/iphone/iphone_PNG5736.png"
     },
     {
       "id": 5,
-      "name": "Airpods Pro",
-      "desc": "Apple Aipods Pro 1st generation",
-      "price": 200,
-      "color": "#e3e4e9",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQROEs084z65psoo06zYl5R0tUzywOVKVQZzmzqCj3PDP1vVJTWv3gGwGMFENSy4qV4n7sEQjE&usqp=CAc"
+      "name": "iPhone 12 Pro",
+      "desc": "Apple iPhone 12th generation",
+      "price": 440,
+      "color": "#33505a",
+      "image": "http://s3.amazonaws.com/digitaltrends-uploads-prod/2017/03/iphone-SE.jpg"
     },
     {
       "id": 6,
-      "name": "iPad Pro",
-      "desc": "Apple iPad Pro 2020 edition",
-      "price": 799,
-      "color": "#f73984",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNzUeRQ5uH7E3hpECib8qxdhfHv6SnUGT7mOsew_xiOoqRR7ZpdH-TQ4J6-HuIEfqHimYyPXWH&usqp=CAc"
+      "name": "iPhone 11 Pro",
+      "desc": "Apple iPhone 12th generation",
+      "price": 492,
+      "color": "#33505a",
+      "image": "https://pluspng.com/img-png/iphone-hd-png-ios7-hd-png-2400.png"
     },
     {
       "id": 7,
-      "name": "Galaxy S21 Ultra",
-      "desc": "Samsung Galaxy S21 Ultra 2021 edition",
-      "price": 1299,
-      "color": "#1c1c1c",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT_PZcc0wicVYR992s5QCIDLYy8t-z-9kibTUdWZBN2sd86aaqdAJfhvxAwZNWV9wfdzDikpr1&usqp=CAc"
+      "name": "iPhone 12 Pro",
+      "desc": "Apple iPhone 12th generation",
+      "price": 759,
+      "color": "#33505a",
+      "image": "https://i5.walmartimages.com/asr/914bbe13-4c0e-4653-810b-cdd0127ea74f.364c40c4b678f93532e595f4ba221643.jpeg"
     },
     {
       "id": 8,
-      "name": "Galaxy S21",
-      "desc": "Samsung Galaxy S21 2021 edition",
-      "price": 899,
-      "color": "#7c95eb",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBNHd7FwarbxA1xdMFt24KazjcR4dWPH_t_T5dz4YNK1s7rJAQ8gOIuR_NRw6eeiQgFhbZ9sAN&usqp=CAc"
+      "name": "iPhone 11 Pro",
+      "desc": "Apple iPhone 12th generation",
+      "price": 630,
+      "color": "#33505a",
+      "image": "https://www.acquiremag.com/.image/t_share/MTcxODc5Nzk4MDAyNDI3Nzg2/apple_new-iphone-se-black-white-product-red-colors_04152020.jpg"
+    },
+    {
+      "id": 9,
+      "name": "iPhone 10 Pro",
+      "desc": "Apple iPhone 12th generation",
+      "price": 1999,
+      "color": "#33505a",
+      "image": "https://pngimg.com/uploads/iphone/iphone_PNG5732.png"
+    },
+    {
+      "id": 10,
+      "name": "iPhone 8 Pro",
+      "desc": "Apple iPhone 12th generation",
+      "price": 2850,
+      "color": "#33505a",
+      "image": "https://d28i4xct2kl5lp.cloudfront.net/product_images/1550758208.84.jpg"
     }
+
+
   ]
 }
