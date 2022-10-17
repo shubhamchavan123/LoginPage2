@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
 import 'package:flutter2/models/catalog.dart';
+// import 'package:flutter2/pages/home_wedgets/catalog_header.dart';
+// import 'package:flutter2/pages/home_wedgets/catalog_list.dart';
 import 'package:flutter2/widgets/drawer.dart';
+import 'package:flutter2/widgets/home_wedgets/catalog_header.dart';
+import 'package:flutter2/widgets/home_wedgets/catalog_list.dart';
 import 'package:flutter2/widgets/item_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter2/widgets/themes.dart';
@@ -58,11 +62,11 @@ class _HomepageState extends State<Homepage> {
               children: [
                 Catelogheader(),
                 if (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
-                  CatelogList().expand()
+                  CatelogList().py16().expand()
                 else
-                  Center(
-                    child: CircularProgressIndicator(),
-                  )
+
+                  CircularProgressIndicator().centered().expand(),
+
               ],
             ),
           ),
@@ -132,91 +136,4 @@ class _HomepageState extends State<Homepage> {
   }
 }
 
-class Catelogheader extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        "Catelog App".text.xl3.bold.color(MyTheme.creameColor1).make(),
-        "TrandingProducts".text.make(),
-      ],
-    );
-  }
-}
 
-class CatelogList extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      itemCount: CatalogModel.items.length,
-      itemBuilder: (context, index) {
-        final catalog = CatalogModel.items[index];
-        return CatelogItem(
-          catelog: catalog,
-          key: Key("value"),
-        );
-      },
-    );
-  }
-}
-
-class CatelogItem extends StatelessWidget {
-  final Item catelog;
-
-  const CatelogItem({required Key key, required this.catelog})
-      : assert(catelog != null),
-        super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return VxBox(
-      child: Row(
-        children: [
-          CatalogImage(
-            image: catelog.image,
-            key: Key("value"),
-          ),
-          Expanded(
-              child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              catelog.name.text.lg.color(MyTheme.creameColor1).bold.make(),
-              catelog.desc.text.textStyle(context.captionStyle).make(),
-              10.heightBox,
-              ButtonBar(
-                alignment: MainAxisAlignment.spaceBetween,
-                buttonPadding: EdgeInsets.zero,
-                children: [
-                  "\$${catelog.price}".text.bold.xl.make(),
-                  ElevatedButton(
-                      onPressed: () {},
-                      style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStateProperty.all(MyTheme.creameColor1),
-                          shape: MaterialStateProperty.all(StadiumBorder(),)),
-                      child: "Buy".text.make())
-                ],
-              ).positioned(right: 8),
-            ],
-          ))
-        ],
-      ),
-    ).white.roundedLg.square(150).make().py12();
-  }
-}
-
-class CatalogImage extends StatelessWidget {
-  final String image;
-
-  const CatalogImage({required Key key, required this.image}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Image.network(
-      image,
-    ).box.roundedLg.p8.color(MyTheme.creameColor).make().p16().w40(context);
-  }
-}
