@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
 import 'package:flutter2/models/catalog.dart';
+import 'package:flutter2/utils/routes.dart';
+
 // import 'package:flutter2/pages/home_wedgets/catalog_header.dart';
 // import 'package:flutter2/pages/home_wedgets/catalog_list.dart';
 import 'package:flutter2/widgets/drawer.dart';
@@ -49,6 +51,12 @@ class _HomepageState extends State<Homepage> {
     // final dummyList = List.generate(50, (index) => CatalogModel.items[0]);
     return Scaffold(
         backgroundColor: MyTheme.creameColor,
+        floatingActionButton: FloatingActionButton(
+          onPressed: () =>Navigator.pushNamed(context,MyRoutes.cartRoute),
+          backgroundColor: Colors.orange,
+          child: Icon(CupertinoIcons.cart),
+        ),
+
         // appBar: AppBar(
         //   //1
         //   title: Text("CatalogApp"),
@@ -64,9 +72,7 @@ class _HomepageState extends State<Homepage> {
                 if (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
                   CatelogList().py16().expand()
                 else
-
                   CircularProgressIndicator().centered().expand(),
-
               ],
             ),
           ),
@@ -135,5 +141,3 @@ class _HomepageState extends State<Homepage> {
         );
   }
 }
-
-

@@ -13,12 +13,13 @@ class HomeDatailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       backgroundColor: MyTheme.creameColor,
       bottomNavigationBar: Container(
         color: Colors.white,
         child: ButtonBar(
-
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: EdgeInsets.zero,
           children: [
@@ -31,10 +32,10 @@ class HomeDatailPage extends StatelessWidget {
                   shape: MaterialStateProperty.all(
                     StadiumBorder(),
                   )),
-              child: "Buy".text.make(),
-            ).wh(100, 50),
+              child: "Add to Cart".text.make(),
+            ).wh(130, 40),
           ],
-        ).p32(),
+        ).p16(),
       ),
       body: SafeArea(
         bottom: false,
@@ -60,6 +61,11 @@ class HomeDatailPage extends StatelessWidget {
                         .make(),
                     catalog.desc.text.textStyle(context.captionStyle).xl.make(),
                     10.heightBox,
+                    "kgjgffgdjksgfkdjhgfhdgfjagfjs lor hdhhdh hhfhfhhfhfhfhhhhhh"
+                        .text
+                        .textStyle(context.captionStyle)
+                        .make().p1()
+
                   ],
                 ).py64(),
               ),

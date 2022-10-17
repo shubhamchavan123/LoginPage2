@@ -77,7 +77,7 @@ class CatelogItem extends StatelessWidget {
                           shape: MaterialStateProperty.all(
                             StadiumBorder(),
                           )),
-                      child: "Buy".text.make())
+                      child: "Add To Cart".text.make())
                 ],
               ).positioned(right: 8),
             ],
