@@ -16,9 +16,10 @@ class HomeDatailPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
       ),
-      backgroundColor: MyTheme.creameColor,
+      backgroundColor: Color.fromARGB(110, 100, 150, 220),
       bottomNavigationBar: Container(
-        color: Colors.white,
+
+        color: Colors.blue,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: EdgeInsets.zero,
@@ -51,7 +52,7 @@ class HomeDatailPage extends StatelessWidget {
               arcType: VxArcType.CONVEY,
               edge: VxEdge.TOP,
               child: Container(
-                color: Colors.white,
+                color: Colors.grey,
                 width: context.screenWidth,
                 child: Column(
                   children: [
