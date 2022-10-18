@@ -1,7 +1,8 @@
 import 'package:flutter2/models/catalog.dart';
 import 'dart:convert';
+
 class CatalogModel {
-  static  List<Item> items = [
+  static List<Item> items = [
     Item(
         id: 1,
         name: "iPhone12",
@@ -10,6 +11,11 @@ class CatalogModel {
         color: "#33505a",
         image: "https://pngimg.com/uploads/iphone/iphone_PNG5736.png")
   ];
+
+ static Item getById(int id) =>
+      items.firstWhere((element) => element.id == id, orElse: null);
+
+  static Item getByPosition(int pos) => items[pos];
 }
 
 class Item {
@@ -20,31 +26,30 @@ class Item {
   final String color;
   final String image;
 
-  Item({required this.id,
-    required this.name,
-    required this.desc,
-    required this.price,
-    required this.color,
-    required this.image});
+  Item(
+      {required this.id,
+      required this.name,
+      required this.desc,
+      required this.price,
+      required this.color,
+      required this.image});
 
-  factory  Item.fromMap(Map<String, dynamic> map) {
+  factory Item.fromMap(Map<String, dynamic> map) {
     return Item(
         id: map["id"],
         name: map["name"],
         desc: map["desc"],
         price: map["price"],
         color: map["color"],
-        image: map["image"]
-    );
+        image: map["image"]);
   }
-  toMap()=>{
 
-    "id":id,
-    "name":name,
-    "desc":desc,
-    "price":price,
-    "color":color,
-    "image":image,
-
-  };
+  toMap() => {
+        "id": id,
+        "name": name,
+        "desc": desc,
+        "price": price,
+        "color": color,
+        "image": image,
+      };
 }
