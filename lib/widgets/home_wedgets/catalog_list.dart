@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter2/models/cart.dart';
 import 'package:flutter2/models/catalog.dart';
 import 'package:flutter2/pages/home_details_page.dart';
 import 'package:flutter2/pages/home_page.dart';
@@ -69,19 +70,7 @@ class CatelogItem extends StatelessWidget {
                 buttonPadding: EdgeInsets.zero,
                 children: [
                   "\$${catelog.price}".text.bold.xl.make(),
-                  ElevatedButton(
-                      onPressed: () {},
-                      style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStateProperty.all(
-
-                                  context.theme.buttonColor),
-
-                          shape: MaterialStateProperty.all(
-
-                            StadiumBorder(),
-                          )),
-                      child: "Add To Cart".text.make())
+                  _AddToCart(catelog:catelog)
                 ],
               ).positioned(right: 8),
             ],
@@ -89,5 +78,46 @@ class CatelogItem extends StatelessWidget {
         ],
       ),
     ).black.roundedLg.square(150).make().py12();
+  }
+}
+
+class _AddToCart extends StatefulWidget {
+  final Item catelog;
+
+  const _AddToCart({
+    Key? key, required this.catelog,
+  }) : super(key: key);
+
+  @override
+  State<_AddToCart> createState() => _AddToCartState();
+}
+
+class _AddToCartState extends State<_AddToCart> {
+
+     bool isAdded=false;
+
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+
+        isAdded=isAdded.toggle();
+         final _catalog=CatalogModel();
+        final _cart =CartModel();
+        _cart.catalog=_catalog;
+        _cart.add(widget.catelog);
+        setState(() {
+
+        });
+      },
+      style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all(
+              context.theme.buttonColor),
+          shape: MaterialStateProperty.all(
+            StadiumBorder(),
+          )),
+      child:isAdded?Icon(Icons.done): "Add To Cart".text.make(),
+    );
   }
 }

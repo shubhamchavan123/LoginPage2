@@ -2,6 +2,13 @@ import 'package:flutter2/models/catalog.dart';
 import 'dart:convert';
 
 class CatalogModel {
+
+
+  static final catModel=CatalogModel._internal();
+
+  CatalogModel._internal();
+  factory CatalogModel()=>catModel;
+
   static List<Item> items = [
     Item(
         id: 1,
