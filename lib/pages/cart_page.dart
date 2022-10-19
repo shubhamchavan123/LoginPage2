@@ -35,7 +35,11 @@ class _CardTotal extends StatelessWidget {
         "\$999999".text.xl5.color(Colors.yellowAccent).make(),
         30.widthBox,
         ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+         
+            ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: "Buying Not Ssupprted".text.make(),));
+            
+          },
           style: ButtonStyle(
               backgroundColor:
                   MaterialStateProperty.all(MyTheme.darkcreameColor)),
